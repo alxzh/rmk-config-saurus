@@ -69,10 +69,10 @@ MAC_LOGOUT = "WM(Q, LCtrl | LGui)"
 [[layer]]
 name = "dusk"
 keys = """
-B                F               L              P           Q              Quote     G              O              U               Y
-MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
-X                V               M              D           Z              Minus     W              Comma          Dot             Slash
-                                 Tab            LT(1,R,FH)  LT(4,Enter,FH) Backspace LT(2,Space,FH) Escape
+B                F               L              P           Q     Quote     G              O              U               Y
+MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K     J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
+X                V               M              D           Z     Minus     W              Comma          Dot             Slash
+                                 LT(1,Tab,FH)   LT(1,R,FH)  Enter Backspace LT(2,Space,FH) Escape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -90,8 +90,8 @@ name = "num"
 keys = """
 No            No            No            No            No               @PLUS         Kc7           Kc8           Kc9           @STAR
 LShift        LCtrl         LGui          LAlt          CapsWordToggle   Minus         Kc4           Kc5           Kc6           Kc0
-@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE    No               Dot           Kc1           Kc2           Kc3           Slash
-                            _             _             _                _             _             _
+@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE    No               Equal         Kc1           Kc2           Kc3           Slash
+                            _             _             _                Backspace     Dot           _
 """
 
 # Layer 2: "nav" - navigation and media controls
@@ -126,10 +126,10 @@ No            No              No              No              No               N
 [[layer]]
 name = "sym"
 keys = """
-Grave         @LT_S         @GT_S         Minus         @PIPE            @CARET        @LCBR         @RCBR         @AMPR         Backslash
-@EXCL         @STAR         Slash         Equal         @HASH            @DLLR         @LPAR         @RPAR         Semicolon     @COLN
-@AT_S         @PLUS         LeftBracket   RightBracket  @PRCNT           @TILD         @UNDS         Comma         Dot           @QUES
-                            _             Space         _                Enter         Backspace     _
+@CARET        @LT_S         @GT_S         Minus         @PIPE            Grave         @LCBR         @RCBR         @AMPR         Backslash
+@UNDS         @STAR         Slash         Equal         @DLLR            @HASH         @LPAR         @RPAR         Semicolon     @COLN
+@EXCL         @PLUS         LeftBracket   RightBracket  @PRCNT           @TILD         @AT_S         Comma         Dot           @QUES
+                            _             _             Enter            Backspace     Space     _
 """
 
 # Layer 4: "controls" - system controls (placeholder for Vial configuration)
