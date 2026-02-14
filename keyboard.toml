@@ -1,0 +1,201 @@
+# Saurus keyboard - RMK configuration
+# 36-key split keyboard (3x5 + 3 thumb keys per side)
+# Hardware: Seeed XIAO BLE (nRF52840), col2row diodes
+
+[keyboard]
+name = "Saurus"
+product_name = "Saurus"
+vendor_id = 0x4C53
+product_id = 0x5352
+manufacturer = "Custom"
+chip = "nrf52840"
+# USB disabled since this is a wireless-only split keyboard
+# Set to true if you want USB HID on the central half
+usb_enable = true
+
+# Layout: 4 rows x 10 cols (split across two halves)
+# Positions (3,0), (3,1), (3,8), (3,9) are not wired (no keys there)
+[layout]
+rows = 4
+cols = 10
+layers = 5
+matrix_map = """
+(0,0,L)  (0,1,L)  (0,2,L)  (0,3,L)  (0,4,L)    (0,5,R)  (0,6,R)  (0,7,R)  (0,8,R)  (0,9,R)
+(1,0,L)  (1,1,L)  (1,2,L)  (1,3,L)  (1,4,L)    (1,5,R)  (1,6,R)  (1,7,R)  (1,8,R)  (1,9,R)
+(2,0,L)  (2,1,L)  (2,2,L)  (2,3,L)  (2,4,L)    (2,5,R)  (2,6,R)  (2,7,R)  (2,8,R)  (2,9,R)
+                   (3,2,L)  (3,3,L)  (3,4,L)    (3,5,R)  (3,6,R)  (3,7,R)
+"""
+
+# Aliases for shifted symbols and macOS shortcuts
+[aliases]
+# Shifted symbols
+PLUS  = "WM(Equal, LShift)"
+STAR  = "WM(Kc8, LShift)"
+EXCL  = "WM(Kc1, LShift)"
+AT_S  = "WM(Kc2, LShift)"
+HASH  = "WM(Kc3, LShift)"
+DLLR  = "WM(Kc4, LShift)"
+PRCNT = "WM(Kc5, LShift)"
+CARET = "WM(Kc6, LShift)"
+AMPR  = "WM(Kc7, LShift)"
+LPAR  = "WM(Kc9, LShift)"
+RPAR  = "WM(Kc0, LShift)"
+PIPE  = "WM(Backslash, LShift)"
+LCBR  = "WM(LeftBracket, LShift)"
+RCBR  = "WM(RightBracket, LShift)"
+LT_S  = "WM(Comma, LShift)"
+GT_S  = "WM(Dot, LShift)"
+COLN  = "WM(Semicolon, LShift)"
+TILD  = "WM(Grave, LShift)"
+UNDS  = "WM(Minus, LShift)"
+QUES  = "WM(Slash, LShift)"
+# macOS shortcuts
+MAC_UNDO   = "WM(Z, LGui)"
+MAC_CUT    = "WM(X, LGui)"
+MAC_COPY   = "WM(C, LGui)"
+MAC_PASTE  = "WM(V, LGui)"
+MAC_LOGOUT = "WM(Q, LCtrl | LGui)"
+
+# Layer 0: "dusk" - base alpha layer (modified Night layout with home row mods)
+# ┌───┬───┬───┬───┬───┐   ┌───┬───┬───┬───┬───┐
+# │ B │ F │ L │ D │ Q │   │ ' │ W │ O │ U │ J │
+# ├───┼───┼───┼───┼───┤   ├───┼───┼───┼───┼───┤
+# │N/⇧│S/⌃│H/⌘│T/L3│ K │   │ Y │C/L3│A/⌘│E/⌃│I/⇧│
+# ├───┼───┼───┼───┼───┤   ├───┼───┼───┼───┼───┤
+# │ X │ V │ M │ P │ Z │   │ - │ G │ , │ . │ / │
+# └───┴───┼───┼───┼───┤   ├───┼───┼───┼───┴───┘
+#         │Tab│R/L1│Ent/L4│   │Bsp│Spc/L2 │Esc│
+#         └───┴───┴───┘   └───┴───┴───┘
+[[layer]]
+name = "dusk"
+keys = """
+B                F               L              P           Q              Quote     G              O              U               Y
+MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
+X                V               M              D           Z              Minus     W              Comma          Dot             Slash
+                                 Tab            LT(1,R,FH)  LT(4,Enter,FH) Backspace LT(2,Space,FH) Escape
+"""
+
+# Layer 1: "num" - numbers and macOS editing shortcuts
+# ┌────┬────┬────┬────┬────┐   ┌───┬───┬───┬───┬───┐
+# │    │    │    │    │    │   │ + │ 7 │ 8 │ 9 │ * │
+# ├────┼────┼────┼────┼────┤   ├───┼───┼───┼───┼───┤
+# │ ⇧  │ ⌃  │ ⌘  │ ⌥  │ CW │   │ - │ 4 │ 5 │ 6 │ 0 │
+# ├────┼────┼────┼────┼────┤   ├───┼───┼───┼───┼───┤
+# │Undo│Cut │Copy│Pste│    │   │ . │ 1 │ 2 │ 3 │ / │
+# └────┴────┼────┼────┼────┤   ├───┼───┼───┼───┴───┘
+#           │    │    │    │   │   │   │   │
+#           └────┴────┴────┘   └───┴───┴───┘
+[[layer]]
+name = "num"
+keys = """
+No            No            No            No            No               @PLUS         Kc7           Kc8           Kc9           @STAR
+LShift        LCtrl         LGui          LAlt          CapsWordToggle   Minus         Kc4           Kc5           Kc6           Kc0
+@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE    No               Dot           Kc1           Kc2           Kc3           Slash
+                            _             _             _                _             _             _
+"""
+
+# Layer 2: "nav" - navigation and media controls
+# ┌────┬────┬────┬────┬────┐   ┌────┬────┬────┬────┬────────┐
+# │    │ ⏮  │ ⏯  │ ⏭  │    │   │    │Mute│Vol-│Vol+│Logout  │
+# ├────┼────┼────┼────┼────┤   ├────┼────┼────┼────┼────────┤
+# │ ⇧  │ ⌃  │ ⌘  │ ⌥  │ CW │   │    │ ←  │ ↓  │ ↑  │  →     │
+# ├────┼────┼────┼────┼────┤   ├────┼────┼────┼────┼────────┤
+# │    │    │    │    │    │   │    │Home│PgDn│PgUp│  End    │
+# └────┴────┼────┼────┼────┤   ├────┼────┼────┼────┴────────┘
+#           │    │    │    │   │    │    │    │
+#           └────┴────┴────┘   └────┴────┴────┘
+[[layer]]
+name = "nav"
+keys = """
+No            MediaPrevTrack  MediaPlayPause  MediaNextTrack  No               No            AudioMute     AudioVolDown  AudioVolUp    @MAC_LOGOUT
+LShift        LCtrl           LGui            LAlt            CapsWordToggle   No            Left          Down          Up            Right
+No            No              No              No              No               No            Home          PageDown      PageUp        End
+                              _               _               _                _             _             _
+"""
+
+# Layer 3: "sym" - symbols
+# ┌───┬───┬───┬───┬───┐   ┌───┬───┬───┬───┬───┐
+# │ ` │ < │ > │ - │ | │   │ ^ │ { │ } │ & │ \ │
+# ├───┼───┼───┼───┼───┤   ├───┼───┼───┼───┼───┤
+# │ ! │ * │ / │ = │ # │   │ $ │ ( │ ) │ ; │ : │
+# ├───┼───┼───┼───┼───┤   ├───┼───┼───┼───┼───┤
+# │ @ │ + │ [ │ ] │ % │   │ ~ │ _ │ , │ . │ ? │
+# └───┴───┼───┼───┼───┤   ├───┼───┼───┼───┴───┘
+#         │   │Spc│   │   │Ent│Bsp│   │
+#         └───┴───┴───┘   └───┴───┴───┘
+[[layer]]
+name = "sym"
+keys = """
+Grave         @LT_S         @GT_S         Minus         @PIPE            @CARET        @LCBR         @RCBR         @AMPR         Backslash
+@EXCL         @STAR         Slash         Equal         @HASH            @DLLR         @LPAR         @RPAR         Semicolon     @COLN
+@AT_S         @PLUS         LeftBracket   RightBracket  @PRCNT           @TILD         @UNDS         Comma         Dot           @QUES
+                            _             Space         _                Enter         Backspace     _
+"""
+
+# Layer 4: "controls" - system controls (placeholder for Vial configuration)
+# BT profile management is done through Vial in RMK
+[[layer]]
+name = "controls"
+keys = """
+No            No            No            No            No               No            No            No            No            No
+No            No            No            No            No               No            No            No            No            No
+No            No            No            No            No               No            No            No            No            No
+                            _             _             _                _             _             _
+"""
+
+# Behavior: tap-hold tuning for home row mods
+[behavior.morse]
+enable_flow_tap = true
+prior_idle_time = "100ms"
+hold_timeout = "280ms"
+gap_timeout = "280ms"
+
+[behavior.morse.profiles]
+# This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
+HRM = { permissive_hold = true, unilateral_tap = true, hold_timeout = "280ms", gap_timeout = "280ms" }
+# This profile is recommended when the hold action activates a layer or acts as a modifier (without HRM) (for example thumb keys)
+FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
+
+[storage]
+# Default nRF52840 storage location
+start_addr = 0x000A0000
+num_sectors = 8
+
+[ble]
+enabled = true
+
+# Split keyboard configuration
+# Left half = central (connects to host via BLE/USB)
+# Right half = peripheral (connects to central via BLE)
+[split]
+connection = "ble"
+
+[split.central]
+rows = 4
+cols = 5
+row_offset = 0
+col_offset = 0
+ble_addr = [0x18, 0xe2, 0x21, 0x80, 0xc0, 0xc7]
+
+[split.central.matrix]
+matrix_type = "normal"
+# RMK uses col2row as default - matches the Saurus PCB diode direction
+# row_pins = physical matrix rows (sense/input)
+# col_pins = physical matrix columns (drive/output)
+# XIAO BLE pin mapping: D0=P0_02, D1=P0_03, D2=P0_28, D3=P0_29,
+#   D6=P1_11, D7=P1_12, D8=P1_13, D9=P1_14, D10=P1_15
+row_pins = ["P1_14", "P1_13", "P1_12", "P1_11"]
+col_pins = ["P1_15", "P0_29", "P0_28", "P0_03", "P0_02"]
+
+[[split.peripheral]]
+rows = 4
+cols = 5
+row_offset = 0
+col_offset = 5
+ble_addr = [0x7e, 0xfe, 0x73, 0x9e, 0x66, 0xe3]
+
+[split.peripheral.matrix]
+matrix_type = "normal"
+# Same row pins as central, mirrored column pins
+row_pins = ["P1_14", "P1_13", "P1_12", "P1_11"]
+col_pins = ["P0_02", "P0_03", "P0_28", "P0_29", "P1_15"]
