@@ -1,0 +1,7 @@
+# Simple experimental RMK config for Saurus keyboard.
+
+Install tools:
+  cargo install cargo-make flip-link
+
+Then build with this command:
+  cargo make uf2 --release
