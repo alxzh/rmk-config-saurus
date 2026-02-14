@@ -69,10 +69,10 @@ MAC_LOGOUT = "WM(Q, LCtrl | LGui)"
 [[layer]]
 name = "dusk"
 keys = """
-B                F               L              P           Q     Quote     G              O              U               Y
-MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K     J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
-X                V               M              D           Z     Minus     W              Comma          Dot             Slash
-                                 LT(4,Tab,NH)   LT(1,R,NH)  Enter Backspace LT(2,Space,FH) Escape
+B                F               L              P           Q              Quote     G              O              U               Y
+MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
+X                V               M              D           Z              Minus     W              Comma          Dot             Slash
+                                 LT(4,Tab,NH)   R           LT(1,Enter,FH) Backspace LT(2,Space,FH) Escape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
