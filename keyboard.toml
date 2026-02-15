@@ -72,7 +72,7 @@ keys = """
 B                F               L              P           Q              Quote     G              O              U               Y
 MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
 X                V               M              D           Z              Minus     W              Comma          Dot             Slash
-                                 LT(4,Tab,NH)   R           LT(1,Enter,FH) Backspace LT(2,Space,FH) Escape
+                                 LT(4,Tab,NH)   R           LT(1,Enter,FH) Backspace LT(2,Space,FH) GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -147,6 +147,7 @@ No            No            No            No            No               No     
 [behavior.morse]
 hold_timeout = "280ms"
 gap_timeout = "280ms"
+bilateral_keys = [[3, 2], [3, 4], [3, 5], [3, 7]]
 
 [behavior.morse.profiles]
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
