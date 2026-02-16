@@ -177,6 +177,7 @@ cols = 5
 row_offset = 0
 col_offset = 0
 ble_addr = [0x18, 0xe2, 0x21, 0x80, 0xc0, 0xc7]
+battery_adc_pin = "vddh"
 
 [split.central.matrix]
 matrix_type = "normal"
@@ -194,6 +195,7 @@ cols = 5
 row_offset = 0
 col_offset = 5
 ble_addr = [0x7e, 0xfe, 0x73, 0x9e, 0x66, 0xe3]
+battery_adc_pin = "vddh"
 
 [split.peripheral.matrix]
 matrix_type = "normal"
