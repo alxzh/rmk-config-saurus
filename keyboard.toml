@@ -72,7 +72,7 @@ keys = """
 B                F               L              P           Q              Quote     G              O              U               Y
 MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
 X                V               M              D           Z              Minus     W              Comma          Dot             Slash
-                                 LT(4,Tab,NH)   R           LT(1,Enter,FH) Backspace LT(2,Space,FH) GraveEscape
+                                 LT(4,Tab,TH)   LT(1,R,TH)  Enter          Backspace LT(2,Space,FH) GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -152,8 +152,8 @@ gap_timeout = "280ms"
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
 HRM = { enable_flow_tap = true, permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "400ms" }
 # This profile is recommended when the hold action activates a layer or acts as a modifier (without HRM) (for example thumb keys)
-FH = { hold_on_other_press = true, enable_flow_tap = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms", prior_idle_time = "100ms" }
-NH = { hold_on_other_press = false, enable_flow_tap = false, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
+FH = { hold_on_other_press = true, hold_timeout = "200ms", gap_timeout = "200ms" }
+TH = { normal_mode = true, hold_timeout = "200ms", gap_timeout = "200ms" }
 
 [storage]
 # Default nRF52840 storage location
