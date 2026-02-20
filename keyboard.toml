@@ -153,7 +153,7 @@ gap_timeout = "280ms"
 HRM = { enable_flow_tap = true, permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "400ms" }
 # This profile is recommended when the hold action activates a layer or acts as a modifier (without HRM) (for example thumb keys)
 FH = { hold_on_other_press = true, hold_timeout = "200ms", gap_timeout = "200ms" }
-TH = { normal_mode = true, hold_timeout = "200ms", gap_timeout = "200ms" }
+TH = { normal_mode = true, enable_flow_tap = true, hold_timeout = "200ms", gap_timeout = "200ms" }
 
 [storage]
 # Default nRF52840 storage location
