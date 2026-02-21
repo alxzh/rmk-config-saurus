@@ -145,7 +145,7 @@ No            No            No            No            No               No     
 
 # Behavior: tap-hold tuning for home row mods
 [behavior.morse]
-enable_flow_tap = true,
+enable_flow_tap = true
 hold_timeout = "280ms"
 gap_timeout = "280ms"
 
