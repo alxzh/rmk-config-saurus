@@ -72,7 +72,7 @@ keys = """
 B                F               L              P           Q              Quote     G              O              U               Y
 MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
 X                V               M              D           Z              Minus     W              Comma          Dot             Slash
-                                 LT(4,Tab,TH)   LT(1,R,PH)  Enter          Backspace LT(2,Space,FH) GraveEscape
+                                 LT(4,Tab,TH)   LT(1,R,PH)  Enter          Backspace LT(2,Space,PH) GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -152,8 +152,6 @@ gap_timeout = "280ms"
 [behavior.morse.profiles]
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
 HRM = { permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "400ms" }
-# This profile is recommended when the hold action activates a layer or acts as a modifier (without HRM) (for example thumb keys)
-FH = { hold_on_other_press = true, hold_timeout = "200ms", gap_timeout = "200ms" }
 PH = { permissive_hold = true }
 TH = { normal_mod = true, enable_flow_tap = false }
 
