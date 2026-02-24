@@ -151,8 +151,8 @@ gap_timeout = "120ms"
 [behavior.morse.profiles]
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
 HRM = { permissive_hold = true, enable_flow_tap = true, unilateral_tap = true, hold_timeout = "400ms" }
-FH = { hold_on_other_press = true }
-PH = { permissive_hold = true }
+FH = { hold_on_other_press = true, gap_timeout = "100ms" }
+PH = { permissive_hold = true, gap_timeout = "100ms" }
 TH = { normal_mode = true }
 
 [storage]
