@@ -69,10 +69,10 @@ MAC_LOGOUT = "WM(Q, LCtrl | LGui)"
 [[layer]]
 name = "dusk"
 keys = """
-B     F     L     P     Q     Quote     G     O     U     Y
-TD(0) TD(1) TD(2) TD(3) K     J         TD(4) TD(5) TD(6) TD(6)
-X     V     M     D     Z     Minus     W     Comma Dot   Slash
-            TD(7) TD(8) Enter Backspace TD(9) GraveEscape
+B     F     L     P     Q     Quote     G      O     U     Y
+TD(0) TD(1) TD(2) TD(3) K     J         TD(4)  TD(5) TD(6) TD(7)
+X     V     M     D     Z     Minus     W      Comma Dot   Slash
+            TD(8) TD(9) Enter Backspace TD(10) GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -170,7 +170,7 @@ profile = "HRM"
 [[behavior.morse.morses]]
 tap = "H"
 hold = "LGui"
-hold_after_tap = "N"
+hold_after_tap = "H"
 profile = "HRM"
 
 [[behavior.morse.morses]]
