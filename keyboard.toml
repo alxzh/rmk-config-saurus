@@ -69,10 +69,10 @@ MAC_LOGOUT = "WM(Q, LCtrl | LGui)"
 [[layer]]
 name = "dusk"
 keys = """
-B                F               L              P           Q              Quote     G              O              U               Y
-MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
-X                V               M              D           Z              Minus     W              Comma          Dot             Slash
-                                 LT(4,Tab,TH)   LT(1,R,PH)  Enter          Backspace LT(2,Space,FH) GraveEscape
+B     F     L     P     Q     Quote     G     O     U     Y
+TD(0) TD(1) TD(2) TD(3) K     J         TD(4) TD(5) TD(6) TD(6)
+X     V     M     D     Z     Minus     W     Comma Dot   Slash
+            TD(7) TD(8) Enter Backspace TD(9) GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -154,6 +154,72 @@ HRM = { permissive_hold = true, enable_flow_tap = true, unilateral_tap = true, h
 FH = { hold_on_other_press = true }
 PH = { permissive_hold = true }
 TH = { normal_mode = true }
+
+[[behavior.morse.morses]]
+tap = "N"
+hold = "LShift"
+hold_after_tap = "N"
+profile = "HRM"
+
+[[behavior.morse.morses]]
+tap = "S"
+hold = "LCtrl"
+hold_after_tap = "S"
+profile = "HRM"
+
+[[behavior.morse.morses]]
+tap = "H"
+hold = "LGui"
+hold_after_tap = "N"
+profile = "HRM"
+
+[[behavior.morse.morses]]
+tap = "T"
+hold = "MO(3)"
+hold_after_tap = "T"
+profile = "HRM"
+
+[[behavior.morse.morses]]
+tap = "C"
+hold = "MO(3)"
+hold_after_tap = "C"
+profile = "HRM"
+
+[[behavior.morse.morses]]
+tap = "A"
+hold = "RGui"
+hold_after_tap = "A"
+profile = "HRM"
+
+[[behavior.morse.morses]]
+tap = "E"
+hold = "RCtrl"
+hold_after_tap = "E"
+profile = "HRM"
+
+[[behavior.morse.morses]]
+tap = "I"
+hold = "RShift"
+hold_after_tap = "I"
+profile = "HRM"
+
+[[behavior.morse.morses]]
+tap = "Tab"
+hold = "MO(4)"
+hold_after_tap = "Tab"
+profile = "TH"
+
+[[behavior.morse.morses]]
+tap = "R"
+hold = "MO(1)"
+hold_after_tap = "R"
+profile = "PH"
+
+[[behavior.morse.morses]]
+tap = "Space"
+hold = "MO(2)"
+hold_after_tap = "Space"
+profile = "FH"
 
 [storage]
 # Default nRF52840 storage location
