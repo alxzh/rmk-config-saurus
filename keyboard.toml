@@ -69,9 +69,9 @@ MAC_LOGOUT = "WM(Q, LCtrl | LGui)"
 [[layer]]
 name = "dusk"
 keys = """
-B                F               L              P           Q              Quote     G              O              U               Y
+B                F               L              P           Q              Quote     W              O              U               Y
 MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
-X                V               M              D           Z              Minus     W              Comma          Dot             Slash
+X                V               M              D           Z              Minus     G              Comma          Dot             Slash
                                  TD(8)          LT(1,R,PH)  Enter          Backspace TD(10) GraveEscape
 """
 
