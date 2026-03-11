@@ -229,6 +229,7 @@ clear_storage = true
 
 [ble]
 enabled = true
+passkey_entry = true
 
 # Split keyboard configuration
 # Left half = central (connects to host via BLE/USB)

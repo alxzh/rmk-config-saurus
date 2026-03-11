@@ -19,15 +19,15 @@ rmk = { git = "https://github.com/HaoboGu/rmk.git", features = [
     "split",
     "async_matrix",
     "adafruit_bl",
-#    "passkey_entry",
+    "passkey_entry",
 ] }
-nrf-sdc = { git = "https://github.com/alexmoon/nrf-sdc", rev = "43df6b8b0affeacd9cb4094a3ab4f81576554887", features = [
+nrf-sdc = { git = "https://github.com/alexmoon/nrf-sdc", features = [
     "defmt",
     "peripheral",
     "central",
     "nrf52840",
 ] }
-nrf-mpsl = { git = "https://github.com/alexmoon/nrf-sdc", rev = "43df6b8b0affeacd9cb4094a3ab4f81576554887", features = [
+nrf-mpsl = { git = "https://github.com/alexmoon/nrf-sdc", features = [
     "defmt",
     "critical-section-impl",
     "nrf52840",
