@@ -72,7 +72,7 @@ keys = """
 B                F               L              P           Q              Quote     W              O              U               Y
 MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
 X                V               M              D           Z              Minus     G              Comma          Dot             Slash
-                                 TD(8)          LT(1,R,PH)  Enter          Backspace TD(10) GraveEscape
+                                 TD(1)          TD(2)       Enter          Backspace LT(2,R,PH)     GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -156,70 +156,16 @@ PH = { permissive_hold = true }
 TH = { normal_mode = true }
 
 [[behavior.morse.morses]]
-tap = "N"
-hold = "LShift"
-hold_after_tap = "N"
-profile = "HRM"
-
-[[behavior.morse.morses]]
-tap = "S"
-hold = "LCtrl"
-hold_after_tap = "S"
-profile = "HRM"
-
-[[behavior.morse.morses]]
-tap = "H"
-hold = "LGui"
-hold_after_tap = "N"
-profile = "HRM"
-
-[[behavior.morse.morses]]
-tap = "T"
-hold = "MO(3)"
-hold_after_tap = "T"
-profile = "HRM"
-
-[[behavior.morse.morses]]
-tap = "C"
-hold = "MO(3)"
-hold_after_tap = "C"
-profile = "HRM"
-
-[[behavior.morse.morses]]
-tap = "A"
-hold = "RGui"
-hold_after_tap = "A"
-profile = "HRM"
-
-[[behavior.morse.morses]]
-tap = "E"
-hold = "RCtrl"
-hold_after_tap = "E"
-profile = "HRM"
-
-[[behavior.morse.morses]]
-tap = "I"
-hold = "RShift"
-hold_after_tap = "I"
-profile = "HRM"
-
-[[behavior.morse.morses]]
 tap = "Tab"
 hold = "MO(4)"
 hold_after_tap = "Tab"
 profile = "TH"
 
 [[behavior.morse.morses]]
-tap = "R"
-hold = "MO(1)"
-hold_after_tap = "R"
-profile = "PH"
-
-[[behavior.morse.morses]]
 tap = "Space"
-hold = "MO(2)"
+hold = "MO(1)"
 hold_after_tap = "Space"
-profile = "FH"
+profile = "PH"
 
 [storage]
 # Default nRF52840 storage location
