@@ -72,7 +72,7 @@ keys = """
 B                F               L              P           Q              Quote     W              O              U               Y
 MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
 X                V               M              D           Z              Minus     G              Comma          Dot             Slash
-                                 TD(1)          TD(2)       Enter          Backspace LT(2,R,PH)     GraveEscape
+                                 TD(0)          TD(1)       Enter          Backspace LT(2,R,PH)     GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
