@@ -14,7 +14,7 @@ name = "peripheral"
 path = "src/peripheral.rs"
 
 [dependencies]
-rmk = { git = "https://github.com/HaoboGu/rmk.git", rev="refs/pull/785/head", features = [
+rmk = { git = "https://github.com/HaoboGu/rmk.git", features = [
     "nrf52840_ble",
     "split",
     "async_matrix",
