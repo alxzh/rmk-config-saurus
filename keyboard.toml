@@ -129,7 +129,7 @@ keys = """
 @CARET        @LT_S         @GT_S         Minus         @PIPE            Grave         @LCBR         @RCBR         @AMPR         Backslash
 @UNDS         @STAR         Slash         Equal         @DLLR            @HASH         @LPAR         @RPAR         Semicolon     @COLN
 @EXCL         @PLUS         LeftBracket   RightBracket  @PRCNT           @TILD         @AT_S         Comma         Dot           @QUES
-                            _             MO(1)         Enter            Backspace     MO(2)         _
+                            _             MO(1)         Enter            Backspace     TD(1)         _
 """
 
 # Layer 4: "controls" - system controls (placeholder for Vial configuration)
