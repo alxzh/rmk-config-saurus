@@ -72,7 +72,7 @@ keys = """
 B                F               L              P           Q              Quote     W              O              U               Y
 MT(N,LShift,HRM) MT(S,LCtrl,HRM) MT(H,LGui,HRM) LT(3,T,HRM) K              J         LT(3,C,HRM)    MT(A,RGui,HRM) MT(E,RCtrl,HRM) MT(I,RShift,HRM)
 X                V               M              D           Z              Minus     G              Comma          Dot             Slash
-                                 TD(0)         TD(1)        Enter          Backspace LT(2,R,FH)     GraveEscape
+                                 TD(0)          LT(1,R,PH)  Enter          Backspace TD(1)          GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -163,7 +163,7 @@ profile = "TH"
 
 [[behavior.morse.morses]]
 tap = "Space"
-hold = "MO(1)"
+hold = "MO(2)"
 hold_after_tap = "Space"
 profile = "FH"
 
