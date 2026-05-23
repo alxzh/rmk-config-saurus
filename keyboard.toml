@@ -69,10 +69,10 @@ MAC_LOGOUT = "WM(Q, LCtrl | LGui)"
 [[layer]]
 name = "dusk"
 keys = """
-B      F      L      P      Q                   Quote    W      O        U      Y
-TD(2)  TD(3)  TD(4)  TD(5)  K                   J        TD(6)  TD(7)    TD(8)  TD(9)
-X      V      M      D      Z                   Minus    G      Comma    Dot    Slash
-              TD(0)  R      LT(1, Enter, PH)    TD(1)    Space  GraveEscape
+B      F      L      P      Q                   Quote       W      O        U      Y
+TD(2)  TD(3)  TD(4)  TD(5)  K                   J           TD(6)  TD(7)    TD(8)  TD(9)
+X      V      M      D      Z                   Minus       G      Comma    Dot    Slash
+              TD(0)  R      LT(1, Enter, PH)    Backspace   Space  TD(1)
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -129,7 +129,7 @@ keys = """
 @CARET        @LT_S         @GT_S         Minus         @PIPE            Grave         @LCBR         @RCBR         @AMPR         Backslash
 @UNDS         @STAR         Slash         Equal         @DLLR            @HASH         @LPAR         @RPAR         Semicolon     @COLN
 @EXCL         @PLUS         LeftBracket   RightBracket  @PRCNT           @TILD         @AT_S         Comma         Dot           @QUES
-                            _             MO(1)         Enter            Backspace     TD(1)         _
+                            _             MO(1)         Enter            Backspace     Space         TD(1)
 """
 
 # Layer 4: "controls" - system controls (placeholder for Vial configuration)
@@ -139,7 +139,7 @@ name = "controls"
 keys = """
 No            No            No            No            No               No            No            No            No            No
 No            No            No            No            No               No            No            No            No            No
-No            No            No            No            No               No            No            No            No            No
+@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE    No               No            No            No            No            No
                             _             _             _                _             _             _
 """
 
@@ -162,9 +162,9 @@ hold_after_tap = "Tab"
 profile = "TH"
 
 [[behavior.morse.morses]]
-tap = "Backspace"
+tap = "GraveEscape"
 hold = "MO(2)"
-hold_after_tap = "Backspace"
+hold_after_tap = "GraveEscape"
 profile = "FH"
 
 [[behavior.morse.morses]]
