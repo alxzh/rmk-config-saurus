@@ -145,15 +145,17 @@ No            No            No            No            No               No     
 
 # Behavior: tap-hold tuning for home row mods
 [behavior.morse]
+enable_flow_tap = true
 hold_timeout = "250ms"
 gap_timeout = "250ms"
+prior_idle_time = "120ms"
 
 [behavior.morse.profiles]
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
-HRM = { permissive_hold = true, enable_flow_tap = true, unilateral_tap = true, hold_timeout = "400ms", prior_idle_time = "120ms" }
-FH = { hold_on_other_press = true }
-PH = { permissive_hold = true }
-TH = { normal_mode = true }
+HRM = { permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "250ms" }
+FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
+PH = { permissive_hold = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
+TH = { normal_mode = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
 
 [[behavior.morse.morses]]
 tap = "Tab"
