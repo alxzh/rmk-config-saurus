@@ -88,10 +88,10 @@ X      V      M      D        Z        Minus       G      Comma    Dot    Slash
 [[layer]]
 name = "num"
 keys = """
-No            No            No            No            No               @PLUS         Kc7           Kc8           Kc9           @STAR
-LShift        LCtrl         LGui          LAlt          CapsWordToggle   Minus         Kc4           Kc5           Kc6           Kc0
-@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE    No               Equal         Kc1           Kc2           Kc3           Slash
-                            _             _             _                Backspace     Dot           _
+No            No            No            No            No               @PLUS         Kc7    Kc8   Kc9   @STAR
+LShift        LCtrl         LGui          LAlt          CapsWordToggle   Minus         Kc4    Kc5   Kc6   Kc0
+@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE    No               Equal         Kc1    Kc2   Kc3   Slash
+                            _             _             _                Backspace     Space  Dot
 """
 
 # Layer 2: "nav" - navigation and media controls
@@ -154,7 +154,7 @@ prior_idle_time = "120ms"
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
 HRM = { permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "250ms" }
 FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
-PH = { permissive_hold = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
+PH = { permissive_hold = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "150ms" }
 TH = { normal_mode = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
 
 [[behavior.morse.morses]]
