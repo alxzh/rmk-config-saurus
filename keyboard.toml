@@ -75,7 +75,7 @@ keys = """
 B      F      L      D      Q        Quote       W      O        U      Y
 TD(2)  TD(3)  TD(4)  TD(5)  K        J           TD(6)  TD(7)    TD(8)  TD(9)
 X      V      M      G      Z        Minus       P      Comma    Dot    Slash
-              TD(0)  R      TD(11)   Backspace   TD(1)  GraveEscape
+              TD(11) R      TD(0)    Backspace   TD(1)  GraveEscape
 """
 
 # Layer 1: "num" - numbers and macOS editing shortcuts
@@ -162,9 +162,9 @@ PH = { permissive_hold = true, unilateral_tap = false, hold_timeout = "200ms", g
 TH = { normal_mode = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
 
 [[behavior.morse.morses]]
-tap = "Tab"
+tap = "Enter"
 hold = "MO(4)"
-hold_after_tap = "Tab"
+hold_after_tap = "Enter"
 profile = "TH"
 
 [[behavior.morse.morses]]
@@ -228,9 +228,9 @@ hold_after_tap = "R"
 profile = "PH"
 
 [[behavior.morse.morses]]
-tap = "Enter"
+tap = "Tab"
 hold = "MO(1)"
-hold_after_tap = "Enter"
+hold_after_tap = "Tab"
 profile = "PH"
 
 [storage]
