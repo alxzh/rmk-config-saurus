@@ -42,7 +42,8 @@ fn generate_vial_config() {
     let mut content = String::new();
     match File::open(p) {
         Ok(mut file) => {
-            file.read_to_string(&mut content).expect("Cannot read vial.json");
+            file.read_to_string(&mut content)
+                .expect("Cannot read vial.json");
         }
         Err(e) => println!("Cannot find vial.json {:?}: {}", p, e),
     };
@@ -53,7 +54,7 @@ fn generate_vial_config() {
         .read_to_end(&mut keyboard_def_compressed)
         .unwrap();
 
-    let keyboard_id: Vec<u8> = vec![0xB9, 0xBC, 0x09, 0xB2, 0x9D, 0x37, 0x4C, 0xEA];
+    let keyboard_id: Vec<u8> = vec![0xD8, 0x6D, 0xBE, 0x47, 0x8A, 0x0E, 0x21, 0xC5];
     let const_declarations = [
         const_declaration!(pub VIAL_KEYBOARD_DEF = keyboard_def_compressed),
         const_declaration!(pub VIAL_KEYBOARD_ID = keyboard_id),
