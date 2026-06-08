@@ -26,6 +26,7 @@
           };
 
           rustToolchain = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
+          libclang = pkgs.llvmPackages.libclang;
 
           cargo-hex-to-uf2 = pkgs.rustPlatform.buildRustPackage {
             pname = "cargo-hex-to-uf2";
@@ -49,9 +50,12 @@
               cargo-hex-to-uf2
               pkgs.cargo-make
               pkgs.flip-link
+              libclang
               pkgs.probe-rs-tools
             ];
 
+            LIBCLANG_PATH = "${libclang.lib}/lib";
+            BINDGEN_EXTRA_CLANG_ARGS = "-isystem ${libclang.lib}/lib/clang/${pkgs.lib.versions.major libclang.version}/include";
             DEFMT_LOG = "debug";
             RUST_SRC_PATH = "${rustToolchain}/lib/rustlib/src/rust/library";
 
