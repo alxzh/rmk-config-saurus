@@ -1,5 +1,9 @@
 # Simple experimental RMK config for Saurus keyboard.
 
+With Nix:
+  nix develop
+  cargo make uf2 --release
+
 Install tools:
   cargo install cargo-make flip-link
 
