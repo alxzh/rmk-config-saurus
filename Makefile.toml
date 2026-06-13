@@ -1,3 +1,7 @@
+[env]
+KEYBOARD_TOML_PATH = "${CARGO_MAKE_WORKING_DIRECTORY}/keyboard.toml"
+FIRMWARE_TARGET = "thumbv7em-none-eabihf"
+
 [tasks.install-llvm-tools]
 install_crate = { rustup_component_name = "llvm-tools" }
 
@@ -13,6 +17,8 @@ command = "cargo"
 args = [
     "objcopy",
     "--release",
+    "--target",
+    "${FIRMWARE_TARGET}",
     "--bin",
     "central",
     "--",
@@ -31,6 +37,8 @@ command = "cargo"
 args = [
     "objcopy",
     "--release",
+    "--target",
+    "${FIRMWARE_TARGET}",
     "--bin",
     "peripheral",
     "--",
