@@ -113,7 +113,7 @@ keys = """
 No            MediaPrevTrack  MediaPlayPause  MediaNextTrack  No               No            AudioMute     AudioVolDown  AudioVolUp    @MAC_LOGOUT
 LShift        LCtrl           LGui            LAlt            CapsWordToggle   No            Left          Down          Up            Right
 No            No              No              No              No               No            Home          PageDown      PageUp        End
-                              _               _               _                _             _             _
+                              _               MO(1)           Enter            _             _             _
 """
 
 # Layer 3: "sym" - symbols
