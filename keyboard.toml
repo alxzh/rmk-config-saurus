@@ -21,8 +21,7 @@ usb_enable = true
 [layout]
 rows = 4
 cols = 10
-layers = 5
-matrix_map = """
+map = """
 (0,0,L)  (0,1,L)  (0,2,L)  (0,3,L)  (0,4,L)    (0,5,R)  (0,6,R)  (0,7,R)  (0,8,R)  (0,9,R)
 (1,0,L)  (1,1,L)  (1,2,L)  (1,3,L)  (1,4,L)    (1,5,R)  (1,6,R)  (1,7,R)  (1,8,R)  (1,9,R)
 (2,0,L)  (2,1,L)  (2,2,L)  (2,3,L)  (2,4,L)    (2,5,R)  (2,6,R)  (2,7,R)  (2,8,R)  (2,9,R)
@@ -69,7 +68,10 @@ MAC_LOGOUT = "WM(Q, LCtrl | LGui)"
 # └───┴───┼───┼───┼───┤   ├───┼───┼───┼───┴───┘
 #         │Tab/L3│R/L1│Ent/L4│   │Bsp│Spc/L2│Esc/⇧│
 #         └──────┴────┴──────┘   └───┴──────┴─────┘
-[[layer]]
+[keymap]
+layers = 5
+
+[[keymap.layer]]
 name = "dusk"
 keys = """
 B      F      L      D      Q        Quote       W      O        U      Y
@@ -88,7 +90,7 @@ X      V      M      G      Z        Minus       P      Comma    Dot    Slash
 # └────┴────┼────┼────┼────┤   ├───┼───┼───┼───┴───┘
 #           │    │    │    │   │Bsp│Spc│ . │
 #           └────┴────┴────┘   └───┴───┴───┘
-[[layer]]
+[[keymap.layer]]
 name = "num"
 keys = """
 No            No            No            No            No               @PLUS         Kc7    Kc8   Kc9   @STAR
@@ -107,7 +109,7 @@ LShift        LCtrl         LGui          LAlt          CapsWordToggle   Minus  
 # └────┴────┼────┼────┼────┤   ├────┼────┼────┼────┴────────┘
 #           │    │ ⌥  │Ent │   │    │    │    │
 #           └────┴────┴────┘   └────┴────┴────┘
-[[layer]]
+[[keymap.layer]]
 name = "nav"
 keys = """
 No            MediaPrevTrack  MediaPlayPause  MediaNextTrack  No               @MAC_LOGOUT   AudioMute     AudioVolDown  AudioVolUp    Escape
@@ -126,7 +128,7 @@ No            No              No              No              No               N
 # └───┴───┼───┼───┼───┤   ├───┼───┼───┼───┴───┘
 #         │   │L1 │Ent│   │Bsp│Spc│Spc/L2│
 #         └───┴───┴───┘   └───┴───┴──────┘
-[[layer]]
+[[keymap.layer]]
 name = "sym"
 keys = """
 @CARET        @LT_S         @GT_S         Minus         @PIPE            Grave         @LCBR         @RCBR         @AMPR         Backslash
@@ -138,7 +140,7 @@ keys = """
 # Layer 4: "controls" - Bluetooth profile and output controls
 # User0..2 = BT profiles, User3/4 = next/previous, User5 = clear current BT bond,
 # User6 = toggle USB/BLE output, User7 = clear split peer after a 5s hold.
-[[layer]]
+[[keymap.layer]]
 name = "controls"
 keys = """
 User0         User1         User2         User3         User4            User5         User6         User7         No            No
@@ -157,7 +159,7 @@ prior_idle_time = "120ms"
 [behavior.morse.profiles]
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
 HRM = { permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "250ms" }
-HRMSGT = { permissive_hold = true, enable_flow_tap = false, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "100ms" }
+HRMSGT = { permissive_hold = true, enable_flow_tap = false, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "75ms" }
 FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "100ms" }
 PH = { permissive_hold = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "100ms" }
 TH = { normal_mode = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }

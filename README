@@ -9,3 +9,7 @@ Install tools:
 
 Then build with this command:
   cargo make uf2 --release
+
+The cargo-make firmware tasks run `cargo update -p rmk` first, so they build the
+latest commit from RMK's `main` branch. A plain `cargo build` still honors the
+revision in Cargo.lock; run `cargo update -p rmk` first when building directly.
