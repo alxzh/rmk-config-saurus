@@ -110,7 +110,7 @@ LShift        LCtrl         LGui          LAlt          CapsWordToggle   Minus  
 [[layer]]
 name = "nav"
 keys = """
-No            MediaPrevTrack  MediaPlayPause  MediaNextTrack  No               No            AudioMute     AudioVolDown  AudioVolUp    @MAC_LOGOUT
+No            MediaPrevTrack  MediaPlayPause  MediaNextTrack  No               @MAC_LOGOUT   AudioMute     AudioVolDown  AudioVolUp    Escape
 LShift        LCtrl           LGui            LAlt            CapsWordToggle   No            Left          Down          Up            Right
 No            No              No              No              No               No            Home          PageDown      PageUp        End
                               TD(0)           TD(10)          Enter             _             _             _
