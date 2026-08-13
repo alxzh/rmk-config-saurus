@@ -154,15 +154,15 @@ No            No            No            No            No               No     
 enable_flow_tap = true
 hold_timeout = "250ms"
 gap_timeout = "250ms"
-prior_idle_time = "120ms"
+prior_idle_time = "100ms"
 
 [behavior.morse.profiles]
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
-HRM = { permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "250ms" }
-SHIFT = { permissive_hold = true, enable_flow_tap = false, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "75ms" }
-FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "100ms" }
-PH = { permissive_hold = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "100ms" }
-TH = { normal_mode = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
+HRM = { permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms" }
+SHIFT = { permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms" }
+FH = { hold_on_other_press = true, enable_flow_tap = false, hold_timeout = "200ms" }
+PH = { permissive_hold = true, enable_flow_tap = false, hold_timeout = "200ms" }
+TH = { normal_mode = true, enable_flow_tap = false, hold_timeout = "200ms" }
 
 # TD(0)
 [[behavior.morse.morses]]
