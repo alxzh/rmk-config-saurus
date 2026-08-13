@@ -134,7 +134,7 @@ keys = """
 @CARET        @LT_S         @GT_S         Minus         @PIPE            Grave         @LCBR         @RCBR         @AMPR         Backslash
 @UNDS         @STAR         Slash         Equal         @DLLR            @HASH         @LPAR         @RPAR         Semicolon     @COLN
 @EXCL         @PLUS         LeftBracket   RightBracket  @PRCNT           @TILD         @AT_S         Comma         Dot           @QUES
-                            _             TD(10)        Enter            Backspace     TD(1)         TD(11)
+                            Tab           TD(10)        Enter            Backspace     TD(1)         Escape
 """
 
 # Layer 4: "controls" - Bluetooth profile and output controls
@@ -159,7 +159,7 @@ prior_idle_time = "120ms"
 [behavior.morse.profiles]
 # This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
 HRM = { permissive_hold = true, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "250ms" }
-HRMSGT = { permissive_hold = true, enable_flow_tap = false, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "75ms" }
+SHIFT = { hold_on_other_press = true, enable_flow_tap = false, unilateral_tap = true, hold_timeout = "400ms", gap_timeout = "75ms" }
 FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "100ms" }
 PH = { permissive_hold = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "100ms" }
 TH = { normal_mode = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
@@ -183,7 +183,7 @@ profile = "FH"
 tap = "N"
 hold = "LShift"
 hold_after_tap = "N"
-profile = "HRMSGT"
+profile = "SHIFT"
 
 # TD(3)
 [[behavior.morse.morses]]
@@ -232,7 +232,7 @@ profile = "HRM"
 tap = "I"
 hold = "RShift"
 hold_after_tap = "I"
-profile = "HRMSGT"
+profile = "SHIFT"
 
 # TD(10)
 [[behavior.morse.morses]]
