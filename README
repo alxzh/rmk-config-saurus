@@ -13,3 +13,26 @@ Then build with this command:
 The cargo-make firmware tasks run `cargo update -p rmk` first, so they build the
 latest commit from RMK's `main` branch. A plain `cargo build` still honors the
 revision in Cargo.lock; run `cargo update -p rmk` first when building directly.
+
+XIAO nRF52840 battery/power support:
+  * src/xiao.rs samples the 1M/510K divider on P0.31 with 40us SAADC
+    acquisition and 16x hardware oversampling.
+  * RMK drives P0.14 low before ADC setup and keeps it low for the firmware lifetime, as required by Seeed for safe battery sensing.
+  * REG1 DC/DC is enabled; REG0 remains disabled because DCCH is not populated.
+  * The unused onboard P25Q16H QSPI flash enters deep power-down at startup.
+
+Hardware mapping was checked against the final reversible half-board in
+../Saurus/pcb/Saurus.kicad_pcb and its 2025-09-25 Gerber export:
+  * Rows 0..3 = P1.14, P1.13, P1.12, P1.11.
+  * Cols 0..4 = P1.15, P0.29, P0.28, P0.03, P0.02.
+  * The peripheral reverses those columns because the same PCB is mirrored.
+  * Diode anodes face the columns and cathodes the rows, matching RMK col2row.
+  * The thumb row occupies local columns 2..4, matching the layout map.
+  * BAT+ connects directly to the XIAO BAT pad and BAT- to GND.
+  * P0.14/P0.31 and P0.20..P0.25 are internal XIAO signals, not carrier nets.
+The older pcb/production export describes a superseded 46-key/ProMicro design
+and must not be used to validate this firmware.
+
+After changing the low-level XIAO power code, flash one half first. Verify normal
+boot, double-reset UF2 entry, INFO_UF2.TXT mounting, and UF2 reflashing before
+updating the second half. The hardware-controlled charge LED is unchanged.
