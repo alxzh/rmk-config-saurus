@@ -11,8 +11,9 @@ Then build with this command:
   cargo make uf2 --release
 
 The cargo-make firmware tasks run `cargo update -p rmk` first, so they build the
-latest commit from RMK's `main` branch. A plain `cargo build` still honors the
-revision in Cargo.lock; run `cargo update -p rmk` first when building directly.
+latest commit from the `battery_led` branch of `github.com/alxzh/rmk`. A plain
+`cargo build` still honors the revision in Cargo.lock; run `cargo update -p rmk`
+first when building directly.
 
 XIAO nRF52840 battery/power support:
   * src/xiao.rs samples the 1M/510K divider on P0.31 with 40us SAADC

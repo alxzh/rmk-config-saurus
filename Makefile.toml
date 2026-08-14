@@ -3,7 +3,7 @@ KEYBOARD_TOML_PATH = "${CARGO_MAKE_WORKING_DIRECTORY}/keyboard.toml"
 FIRMWARE_TARGET = "thumbv7em-none-eabihf"
 
 # Cargo normally pins git dependencies in Cargo.lock. Refresh RMK explicitly so every
-# cargo-make firmware build starts from the latest commit on RMK's main branch.
+# cargo-make firmware build starts from the latest commit on the fork's battery_led branch.
 [tasks.update-rmk]
 command = "cargo"
 args = ["update", "-p", "rmk"]
