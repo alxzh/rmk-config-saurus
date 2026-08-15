@@ -141,7 +141,7 @@ keys = """
 @CARET        @LT_S         @GT_S         Minus         @PIPE            Grave         @LCBR         @RCBR         @AMPR         Backslash
 @UNDS         @STAR         Slash         Equal         @DLLR            @HASH         @LPAR         @RPAR         Semicolon     @COLN
 @EXCL         @PLUS         LeftBracket   RightBracket  @PRCNT           @TILD         @AT_S         Comma         Dot           @QUES
-                            Tab           TD(10)        Enter            Backspace     TD(1)         Escape
+                            Tab           MO(1)        Enter             Backspace     MO(3)         Escape
 """
 
 # Layer 4: "controls" - Bluetooth profile and output controls
