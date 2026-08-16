@@ -119,7 +119,7 @@ X          V         M        G        Z       Minus        P          Comma    
 name = "sym"
 keys = """
 @CARET        @LT_S         Minus         @GT_S         @PIPE            Grave         @LCBR         @RCBR         Semicolon     @COLN
-@UNDS         @LCBR         @COLN         @RCBR         Backslash        @HASH         @PLUS         Minus         @STAR         Slash
+@UNDS         @LPAR         @COLN         @RPAR         Backslash        @HASH         @PLUS         Minus         @STAR         Slash
 @EXCL         LeftBracket   Semicolon     RightBracket  @DLLR            @PRCNT        @AT_S         @AMPR         @TILD         Equal
                             Tab           MO(num)       Enter            Backspace     MO(nav)       Escape
 """
