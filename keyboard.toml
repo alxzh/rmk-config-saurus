@@ -118,9 +118,9 @@ X          V         M        G        Z       Minus        P          Comma    
 [[keymap.layer]]
 name = "sym"
 keys = """
-@CARET        @LT_S         @GT_S         Minus         @PIPE            Grave         @LCBR         @RCBR         @AMPR         Backslash
-@UNDS         @STAR         Slash         Equal         @DLLR            @HASH         @LPAR         @RPAR         Semicolon     @COLN
-@EXCL         @PLUS         LeftBracket   RightBracket  @PRCNT           @TILD         @AT_S         Comma         Dot           @QUES
+@CARET        @LT_S         Minus         @GT_S         @PIPE            Grave         @LCBR         @RCBR         Semicolon     @COLN
+@UNDS         @LCBR         @COLON        @RCBR         @DLLR            @HASH         @PLUS         Minus         @STAR         Slash
+@EXCL         LeftBracket   Backslash     RightBracket  @PRCNT           @TILD         @AT_S         @AMPR         @TILD         Equal
                             Tab           MO(num)       Enter            Backspace     MO(nav)       Escape
 """
 
@@ -156,7 +156,7 @@ LShift        LCtrl         LGui          LAlt          CapsWordToggle   Minus  
 [[keymap.layer]]
 name = "nav"
 keys = """
-No            MediaPrevTrack  MediaPlayPause  MediaNextTrack  No               @MAC_LOGOUT   AudioMute     AudioVolDown  AudioVolUp    Escape
+No            MediaPrevTrack  MediaPlayPause  MediaNextTrack  No               @MAC_LOGOUT   AudioMute     AudioVolDown  AudioVolUp    _
 LShift        LCtrl           LGui            LAlt            CapsWordToggle   No            Left          Down          Up            Right
 No            No              No              No              No               No            Home          PageDown      PageUp        End
                               MO(sym)         MO(num)         Enter             _             _             _
