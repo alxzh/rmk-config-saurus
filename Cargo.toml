@@ -16,7 +16,7 @@ path = "src/peripheral.rs"
 [dependencies]
 # Track the battery-reporting branch of the RMK fork. `cargo make` refreshes
 # Cargo.lock before firmware builds.
-rmk = { git = "https://github.com/alxzh/rmk.git", branch = "battery_led", features = [
+rmk = { git = "https://github.com/rmk-rs/rmk.git", features = [
     "nrf52840_ble",
     "split",
     "async_matrix",
