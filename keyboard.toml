@@ -137,10 +137,10 @@ Grave         @LT_S         Minus         @GT_S         @PIPE            @CARET 
 [[keymap.layer]]
 name = "num"
 keys = """
-No            No            No            No            No               @PLUS         Kc7    Kc8   Kc9   @STAR
-LShift        LCtrl         LGui          LAlt          CapsWordToggle   Minus         Kc4    Kc5   Kc6   Kc0
-@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE    No               Equal         Kc1    Kc2   Kc3   Dot
-                            _             _             _                Backspace     Space  Slash
+No            No            No            CapsWordToggle  No  @PLUS         Kc7    Kc8   Kc9   @STAR
+LShift        LCtrl         LGui          LAlt            No  Minus         Kc4    Kc5   Kc6   Kc0
+@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE      No  Equal         Kc1    Kc2   Kc3   Dot
+                            _             _               _   Backspace     Space  Slash
 """
 
 # Layer 3: "nav" - navigation and media controls
