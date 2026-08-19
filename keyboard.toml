@@ -118,7 +118,7 @@ X          V         M        G        Z       Minus        P          Comma    
 [[keymap.layer]]
 name = "sym"
 keys = """
-@CARET        @LT_S         Minus         @GT_S         @PIPE            Grave         @LCBR         @RCBR         Semicolon     @COLN
+Grave         @LT_S         Minus         @GT_S         @PIPE            @CARET        @LCBR         @RCBR         Semicolon     @COLN
 @UNDS         @LPAR         @COLN         @RPAR         Backslash        @HASH         @PLUS         Minus         @STAR         Slash
 @EXCL         LeftBracket   Semicolon     RightBracket  @DLLR            @PRCNT        @AT_S         @AMPR         @TILD         Equal
                             Tab           MO(num)       Enter            Backspace     MO(nav)       Escape
