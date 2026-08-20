@@ -121,7 +121,7 @@ keys = """
 Grave         @LT_S         Minus         @GT_S         @PIPE            @CARET        @LCBR         @RCBR         Semicolon     @COLN
 @UNDS         @LPAR         @COLN         @RPAR         Backslash        @HASH         @PLUS         Minus         @STAR         Slash
 @EXCL         LeftBracket   Semicolon     RightBracket  @DLLR            @PRCNT        @AT_S         @AMPR         @TILD         Equal
-                            Tab           MO(num)       Enter            Backspace     MO(nav)       Escape
+                            Tab           MO(num)       Enter            Backspace     @SPACE_NAV    Escape
 """
 
 # Layer 2: "num" - numbers and macOS editing shortcuts
@@ -137,10 +137,10 @@ Grave         @LT_S         Minus         @GT_S         @PIPE            @CARET 
 [[keymap.layer]]
 name = "num"
 keys = """
-No            No            No            CapsWordToggle  No  @PLUS         Kc7    Kc8   Kc9   @STAR
-LShift        LCtrl         LGui          LAlt            No  Minus         Kc4    Kc5   Kc6   Kc0
-@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE      No  Equal         Kc1    Kc2   Kc3   Dot
-                            _             _               _   Backspace     Space  Slash
+No            No            No            CapsWordToggle  No  @PLUS         Kc7         Kc8   Kc9   @STAR
+LShift        LCtrl         LGui          LAlt            No  Minus         Kc4         Kc5   Kc6   Kc0
+@MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE      No  Equal         Kc1         Kc2   Kc3   Dot
+                            _             _               _   Backspace     @SPACE_NAV  Slash
 """
 
 # Layer 3: "nav" - navigation and media controls
