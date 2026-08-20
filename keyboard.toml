@@ -218,6 +218,7 @@ cols = 5
 row_offset = 0
 col_offset = 0
 ble_addr = [0x18, 0xe2, 0x21, 0x80, 0xc0, 0xc7]
+battery_user_description = "Left"
 # P0.14 (held low) and P0.31/SAADC are initialized together in src/xiao.rs
 # so the divider is safe before ADC setup. Acquisition is 40us with 16x oversampling.
 
@@ -237,6 +238,7 @@ cols = 5
 row_offset = 0
 col_offset = 5
 ble_addr = [0x7e, 0xfe, 0x73, 0x9e, 0x66, 0xe3]
+battery_user_description = "Right"
 # Same custom XIAO battery ADC and safe divider-enable handling as the central.
 
 [split.peripheral.matrix]
