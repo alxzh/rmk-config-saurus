@@ -101,7 +101,7 @@ keys = """
 B          F         L        D        Q       Quote        W          O          U         Y
 @N_LSHIFT  @S_LCTRL  @H_LGUI  @T_SYM   K       J            @C_SYM     @A_RGUI    @E_RCTRL  @I_RSHIFT
 X          V         M        G        Z       Minus        P          Comma      Dot       Slash
-                              @TAB_SYM @R_NUM  @ENTR_CTRL   Backspace  @SPACE_NAV @OSM_RSHIFT
+                              @TAB_SYM @R_NUM  @ENTR_CTRL   Backspace  @SPACE_NAV @ESC_RSHIFT
 """
 
 # RMK resolves simultaneously active layers from the highest index down. Keep
