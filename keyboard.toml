@@ -49,9 +49,10 @@ I_RSHIFT = "MT(I, RShift, SHIFT)"
 # Dual-role thumb keys
 TAB_SYM        = "LT(sym, Tab, FH)"
 R_NUM          = "LT(num, R, PH)"
-ENTR_CTRL = "LT(controls, Enter, TH)"
+ENTR_CTRL      = "LT(controls, Enter, TH)"
 SPACE_NAV      = "LT(nav, Space, FH)"
 ESC_RSHIFT     = "MT(GraveEscape, RShift, FH)"
+OSM_RSHIFT     = "OSM(RShift)"
 
 # Shifted symbols
 PLUS  = "WM(Equal, LShift)"
@@ -100,7 +101,7 @@ keys = """
 B          F         L        D        Q       Quote        W          O          U         Y
 @N_LSHIFT  @S_LCTRL  @H_LGUI  @T_SYM   K       J            @C_SYM     @A_RGUI    @E_RCTRL  @I_RSHIFT
 X          V         M        G        Z       Minus        P          Comma      Dot       Slash
-                              @TAB_SYM @R_NUM  @ENTR_CTRL   Backspace  @SPACE_NAV @ESC_RSHIFT
+                              @TAB_SYM @R_NUM  @ENTR_CTRL   Backspace  @SPACE_NAV @OSM_RSHIFT
 """
 
 # RMK resolves simultaneously active layers from the highest index down. Keep
@@ -137,7 +138,7 @@ Grave         @LT_S         Minus         @GT_S         @PIPE            @CARET 
 [[keymap.layer]]
 name = "num"
 keys = """
-No            No            No            CapsWordToggle  No  @PLUS         Kc7         Kc8   Kc9   @STAR
+Escape        No            No            CapsWordToggle  No  @PLUS         Kc7         Kc8   Kc9   @STAR
 LShift        LCtrl         LGui          LAlt            No  Minus         Kc4         Kc5   Kc6   Kc0
 @MAC_UNDO     @MAC_CUT      @MAC_COPY     @MAC_PASTE      No  Equal         Kc1         Kc2   Kc3   Dot
                             _             _               _   Backspace     @SPACE_NAV  Slash
