@@ -8,5 +8,9 @@ linker = "flip-link"
 target = "thumbv7em-none-eabihf"     # Cortex-M4F (nRF52840)
 
 [env]
+# `p256-cortex-m4-sys` contains ARM C/assembly. Use the target toolchain even
+# when the development shell exports a host-only CC (gcc on Linux, clang on macOS).
+CC_thumbv7em_none_eabihf = "arm-none-eabi-gcc"
+AR_thumbv7em_none_eabihf = "arm-none-eabi-ar"
 DEFMT_LOG = "debug"
 KEYBOARD_TOML_PATH = { value = "keyboard.toml", relative = true }

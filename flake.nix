@@ -50,6 +50,7 @@
               cargo-hex-to-uf2
               pkgs.cargo-make
               pkgs.flip-link
+              pkgs.gcc-arm-embedded
               libclang
               pkgs.probe-rs-tools
             ];

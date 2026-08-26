@@ -4,14 +4,17 @@ With Nix:
   nix develop
   cargo make uf2 --release
 
-Install tools:
-  cargo install cargo-make flip-link
+Install tools (when not using Nix):
+  * Install the Arm GNU toolchain so `arm-none-eabi-gcc` and
+    `arm-none-eabi-ar` are on PATH (for example, Debian/Ubuntu package
+    `gcc-arm-none-eabi`).
+  * Run `cargo install cargo-make flip-link`.
 
 Then build with this command:
   cargo make uf2 --release
 
 The cargo-make firmware tasks run `cargo update -p rmk` first, so they build the
-latest commit from the `battery_led` branch of `github.com/alxzh/rmk`. A plain
+latest commit from the default branch of `github.com/rmk-rs/rmk`. A plain
 `cargo build` still honors the revision in Cargo.lock; run `cargo update -p rmk`
 first when building directly.
 

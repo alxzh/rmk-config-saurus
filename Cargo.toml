@@ -14,8 +14,8 @@ name = "peripheral"
 path = "src/peripheral.rs"
 
 [dependencies]
-# Track the battery-reporting branch of the RMK fork. `cargo make` refreshes
-# Cargo.lock before firmware builds.
+# Track RMK's current development branch. `cargo make` refreshes Cargo.lock
+# before firmware builds.
 rmk = { git = "https://github.com/rmk-rs/rmk.git", features = [
     "nrf52840_ble",
     "split",
@@ -23,18 +23,18 @@ rmk = { git = "https://github.com/rmk-rs/rmk.git", features = [
     "adafruit_bl",
     "passkey_entry",
 ] }
-nrf-sdc = { git = "https://github.com/alexmoon/nrf-sdc", rev = "f54b6389ffa2750d4d3a4f5435660cb66b47e51a", features = [
+nrf-sdc = { version = "0.4", features = [
     "defmt",
     "peripheral",
     "central",
     "nrf52840",
 ] }
-nrf-mpsl = { git = "https://github.com/alexmoon/nrf-sdc", rev = "f54b6389ffa2750d4d3a4f5435660cb66b47e51a", features = [
+nrf-mpsl = { version = "0.4", features = [
     "defmt",
     "critical-section-impl",
     "nrf52840",
 ] }
-bt-hci = { version = "0.9", features = ["defmt"] }
+bt-hci = { version = "0.10", features = ["defmt"] }
 
 cortex-m = "0.7.7"
 cortex-m-rt = "0.7.5"
