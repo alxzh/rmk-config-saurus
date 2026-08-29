@@ -204,6 +204,9 @@ enabled = true
 passkey_entry = true
 
 [host]
+# Vial and Rynk are mutually exclusive host protocols.
+vial_enabled = true
+rynk_enabled = false
 # Hold the top-left and top-right keys on the base layer to unlock Vial.
 unlock_keys = [[0, 0], [0, 9]]
 

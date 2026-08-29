@@ -14,9 +14,9 @@ name = "peripheral"
 path = "src/peripheral.rs"
 
 [dependencies]
-# Track RMK's current development branch. `cargo make` refreshes Cargo.lock
-# before firmware builds.
-rmk = { git = "https://github.com/rmk-rs/rmk.git", features = [
+# RMK 0.9 enables Vial, storage, logging, host locking, and the watchdog by
+# default; add the hardware-specific features needed by this keyboard.
+rmk = { version = "0.9", features = [
     "nrf52840_ble",
     "split",
     "async_matrix",

@@ -13,10 +13,10 @@ Install tools (when not using Nix):
 Then build with this command:
   cargo make uf2 --release
 
-The cargo-make firmware tasks run `cargo update -p rmk` first, so they build the
-latest commit from the default branch of `github.com/rmk-rs/rmk`. A plain
-`cargo build` still honors the revision in Cargo.lock; run `cargo update -p rmk`
-first when building directly.
+The firmware uses RMK 0.9 with Vial configuration available over USB. Rynk is
+disabled because the two host protocols are mutually exclusive. Hold the
+top-left and top-right keys to unlock Vial. `Cargo.toml` keeps both direct and
+cargo-make builds on the RMK 0.9 release line.
 
 XIAO nRF52840 battery/power support:
   * src/xiao.rs samples the 1M/510K divider on P0.31 with 40us SAADC
