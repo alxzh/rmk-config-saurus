@@ -13,10 +13,11 @@ Install tools (when not using Nix):
 Then build with this command:
   cargo make uf2 --release
 
-The firmware uses RMK 0.9 with Vial configuration available over USB. Rynk is
-disabled because the two host protocols are mutually exclusive. Hold the
-top-left and top-right keys to unlock Vial. `Cargo.toml` keeps both direct and
-cargo-make builds on the RMK 0.9 release line.
+The firmware uses RMK 0.9 with Rynk configuration available over USB and BLE.
+Vial is disabled because the two host protocols are mutually exclusive. When a
+Rynk client requests access to a protected operation, hold the top-left and
+top-right keys to complete the physical-presence unlock. `Cargo.toml` keeps both
+direct and cargo-make builds on the RMK 0.9 release line.
 
 XIAO nRF52840 battery/power support:
   * src/xiao.rs samples the 1M/510K divider on P0.31 with 40us SAADC

@@ -14,9 +14,13 @@ name = "peripheral"
 path = "src/peripheral.rs"
 
 [dependencies]
-# RMK 0.9 enables Vial, storage, logging, host locking, and the watchdog by
-# default; add the hardware-specific features needed by this keyboard.
-rmk = { version = "0.9", features = [
+# Disable RMK's defaults to replace Vial with Rynk while retaining the other
+# default services this firmware uses.
+rmk = { version = "0.9", default-features = false, features = [
+    "defmt",
+    "storage",
+    "rynk",
+    "watchdog",
     "nrf52840_ble",
     "split",
     "async_matrix",
@@ -61,11 +65,6 @@ static_cell = "2"
 rand = { version = "0.8.4", default-features = false }
 rand_core = { version = "0.6" }
 rand_chacha = { version = "0.3", default-features = false }
-
-[build-dependencies]
-xz2 = "0.1.7"
-json = "0.12"
-const-gen = "1.6"
 
 [profile.dev]
 codegen-units = 1

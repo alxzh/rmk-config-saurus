@@ -12,8 +12,8 @@ vendor_id = 0x4C53
 product_id = 0x5352
 manufacturer = "Vizor"
 chip = "nrf52840"
-# Keep USB enabled so the central half works as wired HID/Vial when plugged in.
-# BLE remains enabled below for wireless host connections and the split link.
+# Keep USB enabled so the central half works as wired HID/Rynk when plugged in.
+# BLE remains enabled below for wireless host and Rynk connections and the split link.
 usb_enable = true
 
 [chip.nrf52840]
@@ -195,8 +195,8 @@ TH = { normal_mode = true, enable_flow_tap = false, hold_timeout = "200ms" }
 # Default nRF52840 storage location
 start_addr = 0x000A0000
 num_sectors = 8
-# Set to true for one flash only when you intentionally want to wipe Vial,
-# BLE bonds, selected BLE profile, and split peer storage.
+# Set to true for one flash only when you intentionally want to wipe Rynk
+# settings, BLE bonds, the selected BLE profile, and split peer storage.
 clear_storage = false
 
 [ble]
@@ -205,9 +205,9 @@ passkey_entry = true
 
 [host]
 # Vial and Rynk are mutually exclusive host protocols.
-vial_enabled = true
-rynk_enabled = false
-# Hold the top-left and top-right keys on the base layer to unlock Vial.
+vial_enabled = false
+rynk_enabled = true
+# Hold the top-left and top-right keys when Rynk requests physical-presence unlock.
 unlock_keys = [[0, 0], [0, 9]]
 
 # Split keyboard configuration
